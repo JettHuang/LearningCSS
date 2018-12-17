@@ -1,0 +1,53 @@
+<!--
+如果你要在HTML元素中设置CSS样式，你需要在元素中设置"id" 和 "class"选择器。
+
+[id选择器]
+id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。
+HTML元素以id属性来设置id选择器,CSS 中 id 选择器以 "#" 来定义。
+
+[class 选择器]
+class 选择器用于描述一组元素的样式，class 选择器有别于id选择器，class可以在多个元素中使用。
+class 选择器在HTML中以class属性表示, 在 CSS 中，类选择器以一个点"."号显示。
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS选择器</title>
+    <style>
+        /* CSS 的注释方式 */
+        
+        p {
+            color: red;
+            text-align: center;
+        }
+        
+        #para1 {
+            text-align: center;
+            color: green;
+        }
+        /* 我的class name叫center*/
+        
+        .center {
+            text-align: center;
+        }
+        
+        p.blue {
+            color: blue;
+        }
+    </style>
+</head>
+<p id="para1">Hello, World!</p>
+<p id="para1">Id能重复么?</p>
+<p>This paragraph is styled with CSS.</p>
+<h1 class="center">标题居中</h1>
+
+<h2 class="blue">我不能blue</h2>
+<p class="blue">我能blue</p>
+
+<body>
+</body>
+
+</html>
