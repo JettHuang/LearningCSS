@@ -1,0 +1,37 @@
+<!--
+CSS Margin(外边距)属性定义元素周围的空间。
+CSS Margin属性接受任何长度单位、百分数值甚至负值。
+margin清除周围的元素（外边框）的区域。margin没有背景颜色，是完全透明的
+margin可以单独改变元素的上，下，左，右边距。也可以一次改变所有的属性。
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Margin外边距</title>
+    <style>
+        div.a {
+            width: 220px;
+            padding: 10px;
+            background-color: yellow;
+            border: 5px solid green;
+            margin: 0px;
+        }
+        
+        div.b {
+            width: 220px;
+            padding: 10px;
+            background-color: red;
+            border: 5px solid blue;
+            margin: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">我是第一个元素块.</div>
+    <div class="b">我是第二个元素块, 我覆盖到上面的块了.</div>
+</body>
+
+</html>
