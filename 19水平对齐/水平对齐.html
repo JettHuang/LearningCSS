@@ -1,0 +1,59 @@
+<!--
+关于 CSS 中元素的水平对齐(Horizontal Align)，你可以使用多种属性来进行设置。
+块元素对齐
+
+块元素是一个元素，占用了全宽，前后都是换行符。
+块元素的例子：
+<h1>
+<p>
+<div>
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>水平对齐</title>
+    <style>
+        .center {
+            margin: auto;
+            width: 70%;
+            background-color: #b0e0e6;
+        }
+        
+        .right {
+            position: absolute;
+            /* 绝对定位与文档流无关，所以它们可以覆盖页面上的其它元素。 */
+            right: 0px;
+            width: 300px;
+            background-color: #b0e0e6;
+        }
+        
+        .float_right {
+            float: right;
+            width: 300px;
+            background-color: #b0e0e6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+        <p>'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+
+    </div>
+
+    <div class="right">
+        <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+        <p>'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+    </div>
+
+    <div class="float_right">
+        <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+        <p>'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+    </div>
+</body>
+
+</html>
