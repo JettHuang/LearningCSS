@@ -1,0 +1,37 @@
+<!--
+CSS 组合选择符可以让你直观的明白选择器与选择器之间的关系。
+
+CSS组合选择符包括各种简单选择符的组合方式。
+在 CSS3 中包含了四种组合方式:
+后代选取器(以空格分隔)
+子元素选择器(以大于号分隔）
+相邻兄弟选择器（以加号分隔）
+普通兄弟选择器（以波浪号分隔）
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>组合选择符</title>
+    <style>
+        /* 以下实例选取所有 <p> 元素插入到 <div> 元素中: */
+        
+        div p {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>段落 1。 在 div 中。</p>
+        <p>段落 2。 在 div 中。</p>
+    </div>
+
+    <p>段落 3。不在 div 中。</p>
+    <p>段落 4。不在 div 中。</p>
+</body>
+
+</html>
