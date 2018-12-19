@@ -1,0 +1,44 @@
+<!--
+CSS 伪元素
+
+CSS伪元素是用来添加一些选择器的特殊效果。
+CSS伪元素控制的内容和元素是没有差别的，但是它本身只是基于元素的抽象，并不存在于文档中，所以称为伪元素。
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p:first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+        
+        h1:first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+        
+        h2:before {
+            content: url(smiley.gif);
+        }
+        
+        h2:after {
+            content: url(smiley.gif);
+        }
+    </style>
+</head>
+
+<body>
+    <p>You can use the :first-line pseudo-element to add a special effect to the first line of a text.<br> Hello, world!
+    </p>
+    <h1>Hello, World!</h1>
+
+    <h2>This is a heading</h2>
+    <p>The :before pseudo-element inserts content before an element.</p>
+    <h2>This is a heading</h2>
+    <p><b>注意:</b>仅当 !DOCTYPE 已经声明 IE8 支持这个内容属性</p>
+</body>
+
+</html>
