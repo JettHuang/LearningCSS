@@ -1,0 +1,95 @@
+<!--
+   CSS position 属性，允许您将布局的一部分与另一部分重叠，还可以完成多年来通常需要使用多个表格才能完成的任务。
+
+   CSS定位属性允许你为一个元素定位。它也可以将一个元素放在另一个元素后面，并指定一个元素的内容太大时，应该发生什么。
+元素可以使用的顶部，底部，左侧和右侧属性定位。然而，这些属性无法工作，除非事先设定position属性。他们也有不同的工作方式，这取决于定位方法.
+有四种不同的定位方法。
+ 
+## Static 定位
+HTML元素的默认值，即没有定位，元素出现在正常的流中。
+静态定位的元素不会受到top, bottom, left, right影响。
+
+## Fixed 定位
+元素的位置相对于浏览器窗口是固定位置。
+即使窗口是滚动的它也不会移动. Fixed定位使元素的位置与文档流无关，因此不占据空间。
+Fixed定位的元素和其他元素重叠。
+
+## Relative 定位
+相对定位元素的定位是相对其正常位置。
+
+## Absolute 定位
+绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于<html>:
+Absolutely定位使元素的位置与文档流无关，因此不占据空间。
+Absolutely定位的元素和其他元素重叠。
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>positioning定位</title>
+    <style>
+        p.pos_fixed {
+            position: fixed;
+            top: 30px;
+            right: 5px;
+        }
+        
+        h2.pos_left {
+            position: relative;
+            left: -20px;
+        }
+        
+        h2.pos_right {
+            position: relative;
+            left: 20px;
+        }
+        
+        h2.pos_top {
+            position: relative;
+            top: -50px;
+        }
+        
+        img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="pos_fixed">Some more text</p>
+    <p><b>注意:</b> IE7和IE8支持只有一个!DOCTYPE指定固定值.</p>
+    <p>Some text</p>
+    <p>Some text</p>
+    <p>Some text</p>
+    <p>Some text</p>
+    <p>Some text</p>
+    <p>Some text</p>
+    <p>Some text</p>
+    <p>Some text</p>
+    <p>Some text</p>
+    <p>Some text</p>
+
+    <hr>
+    <h2>This is a heading with no position</h2>
+    <h2 class="pos_left">This heading is moved left according to its normal position</h2>
+    <h2 class="pos_right">This heading is moved right according to its normal position</h2>
+    <p>Relative positioning moves an element RELATIVE to its original position.</p>
+    <p>The style "left:-20px" subtracts 20 pixels from the element's original left position.</p>
+    <p>The style "left:20px" adds 20 pixels to the element's original left position.</p>
+
+    <hr>
+    <h2>This is a heading with no position</h2>
+    <h2 class="pos_top">This heading is moved upwards according to its normal position</h2>
+    <p><b>注意:</b> 即使相对定位元素的内容是移动,预留空间的元素仍保存在正常流动。</p>
+
+    <h1>This is a heading</h1>
+    <img src="cover_cssref.jpeg" width="100" height="140" />
+    <p>因为图像元素设置了 z-index 属性值为 -1, 所以它会显示在文字之后。</p>
+</body>
+
+</html>
