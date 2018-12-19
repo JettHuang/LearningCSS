@@ -1,0 +1,65 @@
+<!--
+CSS display 属性和 visibility属性都可以用来隐藏某个元素，但是这两个属性有不同的定义，请详细阅读以下内容。
+display属性设置一个元素应如何显示，visibility属性指定一个元素应可见还是隐藏。
+
+display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间。也就是说，该元素不但被隐藏了，而且该元素原本占用的空间也会从页面布局中消失。
+
+如何改变一个元素显示：
+可以更改内联元素为块元素，反之亦然，可以使页面看起来是以一种特定的方式组合，并仍然遵循web标准。
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>显示与可见性</title>
+    <style>
+        h1.hidden {
+            visibility: hidden;
+        }
+        
+        h1.hidden2 {
+            display: none;
+        }
+        /* 块元素改变为内联方式显示 
+        块元素是一个元素，占用了全部宽度，在前后都是换行符。
+        */
+        
+        li {
+            display: inline;
+        }
+        /* 把span元素作为块元素 */
+        
+        span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is a visible heading.</h1>
+    <h1 class="hidden"> This is a hidden heading</h1>
+    <p>注意,隐藏标题仍然占用空间.</p>
+    <h1 class="hidden2"> This is a hidden heading</h1>
+    <p>注意,Display:none标题没有占用空间</p>
+
+    <hr>
+    <p>Display this link list a horizontal menu:</p>
+    <ul>
+        <li><a href="/html/" target="_blank">HTML</li>
+        <li><a href="/css/" target="_blank">CSS</li>
+        <li><a href="/js/" target="_blank">JS</li>
+        <li><a href="/xml/" target="_blank">XML</li>
+    </ul>
+
+    <hr>
+    <h2>Nirvana</h2>
+    <span>Record: MTV Unplugged in New York</span>
+    <span>Year: 1993</span>
+    <h2>Radiohead</h2>
+    <span>Record: OK Computer</span>
+    <span>Year: 1997</span>
+</body>
+
+</html>
