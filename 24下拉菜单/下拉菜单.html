@@ -1,0 +1,76 @@
+<!--
+我们可以使用任何的 HTML元素来打开下拉菜单，如：<span>, 或 a <button> 元素。
+使用容器元素 (如： <div>) 来创建下拉菜单的内容，并放在任何你想放的位置上。
+使用 <div> 元素来包裹这些元素，并使用 CSS 来设置下拉内容的样式。
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>下拉菜单</title>
+    <style>
+        /* 下拉按钮样式 */
+        
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        /* 容器 <div> - 需要定位下拉内容 */
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+        }
+        /*下拉菜单链接*/
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        /* 鼠标移上去后修改下拉菜单链接颜色 */
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>鼠标移动后出现下拉菜单</h2>
+    <p>将鼠标移动到指定元素上就能看到下拉菜单。</p>
+
+    <div class="dropdown">
+        <span>鼠标移动到我这！</span>
+        <button class="dropbtn">下拉菜单</button>
+        <div class="dropdown-content">
+            <p>W3Cschool教程</p>
+            <p>www.w3cschool.cn</p>
+            <a href="#">教程1</a>
+            <a href="#">教程2</a>
+        </div>
+    </div>
+</body>
+
+</html>
